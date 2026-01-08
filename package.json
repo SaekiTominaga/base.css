@@ -1,0 +1,38 @@
+{
+	"name": "@w0s/base.css",
+	"version": "1.0.0",
+	"description": "Base CSS file used on `w0s.jp`",
+	"homepage": "https://github.com/SaekiTominaga/base.css#readme",
+	"bugs": {
+		"url": "https://github.com/SaekiTominaga/base.css/issues"
+	},
+	"license": "MIT",
+	"author": "Saeki Tominaga",
+	"files": [
+		"dist/**/*.css"
+	],
+	"main": "dist/base.css",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SaekiTominaga/base.css.git"
+	},
+	"scripts": {
+		"dev": "http-server -o confirm -c-1",
+		"prebuild": "npm run lint && rimraf -g dist",
+		"build": "postcss src/base.css -d dist",
+		"postbuild": "prettier --config ./.prettierrc.mjs --ignore-path .prettierignore -w \"dist/**/*.css\"",
+		"lint": "stylelint src/**/*.css confirm/**/*.css"
+	},
+	"devDependencies": {
+		"@w0s/stylelint-config": "^4.17.0",
+		"http-server": "^14.1.1",
+		"postcss": "^8.5.6",
+		"postcss-cli": "^11.0.1",
+		"postcss-discard-comments": "^7.0.5",
+		"postcss-import": "^16.1.1",
+		"postcss-nesting": "^13.0.2",
+		"prettier": "^3.7.4",
+		"rimraf": "^6.1.2"
+	}
+}

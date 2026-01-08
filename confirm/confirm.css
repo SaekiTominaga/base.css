@@ -1,0 +1,31 @@
+main {
+	--heading-font-ratio: 1.25;
+
+	& > * + * {
+		margin-block-start: 2rem;
+	}
+
+	& > section {
+		& > * + * {
+			margin-block-start: 1.5rem;
+		}
+
+		& > section > h3:first-child {
+			margin-block-end: 1rem;
+		}
+	}
+
+	& > h1:first-child {
+		font-size: calc(100% * pow(var(--heading-font-ratio), 3));
+	}
+}
+
+section {
+	& > h2:first-child {
+		font-size: calc(100% * pow(var(--heading-font-ratio), 2));
+	}
+
+	& > h3:first-child {
+		font-size: calc(100% * pow(var(--heading-font-ratio), 1));
+	}
+}
