@@ -1,0 +1,34 @@
+# https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
+
+changelog:
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking-change
+
+    - title: Exciting New Features 🎉
+      labels:
+        - enhancement
+
+    - title: Bug Fixes 🐛
+      labels:
+        - bug
+      exclude:
+        labels:
+          - documentation
+
+    - title: Documentation 📄
+      labels:
+        - documentation
+
+    - title: Other Changes
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - dependencies
+          - dev-tools
+
+    - title: Dependency Updates
+      labels:
+        - dependencies

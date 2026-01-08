@@ -1,0 +1,31 @@
+:root {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+:any-link {
+	text-decoration-thickness: from-font;
+}
+
+pre {
+	overflow-inline: auto;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input {
+	&[type="search" i] {
+		appearance: textfield; /* for Safari */
+	}
+}
+
+textarea {
+	resize: block;
+}

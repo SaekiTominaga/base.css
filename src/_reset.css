@@ -1,0 +1,177 @@
+/**
+ * 15.3.2 The page
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#the-page
+ */
+body {
+	margin-block: unset;
+	margin-inline: unset;
+}
+
+/**
+ * 15.3.3 Flow content
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3
+ */
+blockquote,
+figure,
+p,
+pre {
+	margin-block: unset;
+}
+
+blockquote,
+figure {
+	margin-inline: unset;
+}
+
+address {
+	&:lang(ja) {
+		font-style: unset;
+	}
+}
+
+pre {
+	font-family: ui-monospace, monospace; /* Specifying multiple values prevents the font size from becoming smaller */
+
+	@media print {
+		text-wrap-mode: unset;
+	}
+}
+
+/**
+ * 15.3.4 Phrasing content
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3
+ */
+cite,
+dfn,
+em {
+	&:lang(ja) {
+		font-style: unset;
+	}
+}
+
+code,
+kbd,
+samp {
+	font-family: ui-monospace, monospace; /* Specifying multiple values prevents the font size from becoming smaller */
+}
+
+/**
+ * 15.3.6 Sections and headings
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings
+ */
+h1, h2, h3, h4, h5, h6 /* TODO: As soon as browsers support it, replace with `:heading()` */ {
+	margin-block: unset;
+	font-size: unset;
+}
+
+/**
+ * 15.3.7 Lists
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#lists
+ */
+dl,
+menu,
+ol,
+ul {
+	margin-block: unset;
+}
+
+dd {
+	margin-inline-start: unset;
+}
+
+menu,
+ol,
+ul {
+	padding-inline-start: unset;
+}
+
+menu,
+ul {
+	padding-inline-start: unset;
+	list-style-type: unset;
+}
+
+/**
+ * 15.3.8 Tables
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#tables-2
+ */
+td,
+th {
+	padding-block: unset;
+	padding-inline: unset;
+}
+
+/**
+ * 15.3.11 The hr element
+ *
+ * https://momdo.github.io/html/rendering.html#the-hr-element-2
+ */
+hr {
+	margin-block: unset;
+	border-style: unset;
+	color: unset;
+}
+
+/**
+ * 15.3.12 The fieldset and legend elements
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#the-fieldset-and-legend-elements
+ */
+fieldset {
+	margin-inline: unset;
+	border-style: unset;
+	padding-block: unset;
+	padding-inline: unset;
+	min-inline-size: unset;
+}
+
+legend {
+	padding-inline: unset;
+}
+
+/**
+ * 15.4.1 Embedded content
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#embedded-content-rendering-rules
+ */
+iframe {
+	border-style: unset;
+}
+
+/**
+ * etc
+ */
+a:not(:any-link) {
+	color: unset; /* for Dark Reader, iOS Firefox with Website Dark Mode <https://github.com/darkreader/darkreader/issues/9836> */
+}
+
+input,
+select,
+button,
+textarea
+::file-selector-button /* for Firefox <resource://gre-resources/forms.css> */
+{
+	font-family: unset;
+	font-size: unset;
+}
+
+input {
+	&:is([type="checkbox" i], [type="radio" i]) {
+		margin-block: unset;
+		margin-inline: unset;
+	}
+}
+
+optgroup {
+	font-style: unset; /* for Firefox <resource://gre-resources/forms.css> */
+}
+
+textarea {
+	margin-block: unset; /* for Firefox <resource://gre-resources/forms.css> */
+}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="../src/base.css" />
+		<link rel="stylesheet" href="confirm.css" />
+		<title>Page for browser display verification</title>
+	</head>
+	<body>
+		<main>
+			<h1>Page for browser display verification</h1>
+
+			<nav>
+				<ul>
+					<li><a href="#reset">▼ Reset</a></li>
+					<li><a href="#best-practice">▼ Best practice</a></li>
+				</ul>
+			</nav>
+
+			<section id="reset">
+				<h2>Reset</h2>
+
+				<section>
+					<h3>15.3.3 Flow content</h3>
+
+					<blockquote>blockquote</blockquote>
+
+					<figure>figure</figure>
+
+					<p>p</p>
+
+					<address>address (en)</address>
+					<address lang="ja">address (ja)</address>
+
+					<pre>
+pre1 pre2 pre3 pre4 pre5 pre6 pre7 pre8 pre9 pre10 pre11 pre12 pre13 pre14 pre15 pre16 pre17 pre18 pre19 pre20 pre21 pre22 pre23 pre24 pre25 pre26 pre27 pre28 pre29 pre30 pre31 pre32 pre33 pre34 pre35 pre36 pre37 pre38 pre39 pre40
+*** line break ***
+pre31</pre
+					>
+				</section>
+				<section>
+					<h3>15.3.4 Phrasing content</h3>
+
+					<p>
+						<cite>cite (en)</cite>
+						<dfn>dfn (en)</dfn>
+						<em>em (en)</em>
+					</p>
+					<p lang="ja">
+						<cite>cite (ja)</cite>
+						<dfn>dfn (ja)</dfn>
+						<em>em (ja)</em>
+					</p>
+
+					<p>
+						<code>code</code>
+						<kbd>kbd</kbd>
+						<samp>samp</samp>
+					</p>
+				</section>
+				<section>
+					<h3>15.3.6 Sections and headings</h3>
+
+					<div>
+						<h1>h1</h1>
+						<h3>h2</h3>
+						<h3>h3</h3>
+						<h4>h4</h4>
+						<h5>h5</h5>
+						<h6>h6</h6>
+					</div>
+				</section>
+				<section>
+					<h3>15.3.7 Lists</h3>
+
+					<dl>
+						<dt>dt</dt>
+						<dd>dd</dd>
+					</dl>
+
+					<menu>
+						<li>menu > li</li>
+					</menu>
+
+					<ol>
+						<li>ol > li</li>
+					</ol>
+
+					<ul>
+						<li>ul > li</li>
+					</ul>
+				</section>
+				<section>
+					<h3>15.3.8 Tables</h3>
+
+					<table>
+						<tbody>
+							<tr>
+								<th>th</th>
+								<td>td</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>15.3.11 The hr element</h3>
+
+					<hr />
+				</section>
+				<section>
+					<h3>15.3.12 The fieldset and legend elements</h3>
+
+					<fieldset>
+						<legend>fieldset > legend</legend>
+					</fieldset>
+				</section>
+				<section>
+					<h3>15.4.1 Embedded content</h3>
+
+					<iframe src="iframe.html"></iframe>
+				</section>
+				<section>
+					<h3>etc</h3>
+
+					<p><a>a without `href`</a></p>
+
+					<p>
+						<label>Text (en): <input value="input" /></label>
+					</p>
+					<p lang="ja">
+						<label>Text (ja): <input value="input" /></label>
+					</p>
+
+					<p>
+						<label>Search: <input type="search" /></label>
+					</p>
+
+					<p>
+						<label><input type="checkbox" /> Checkbox</label> <label><input type="radio" /> Radio</label>
+					</p>
+
+					<p>
+						<label>File (en): <input type="file" /></label>
+					</p>
+					<p lang="ja">
+						<label>File (ja): <input type="file" /></label>
+					</p>
+
+					<p>
+						<label>
+							Select (en):
+							<select>
+								<option>option1</option>
+								<hr />
+								<option>option2</option>
+								<optgroup label="optgroup">
+									<option>optgroup > option</option>
+								</optgroup>
+							</select>
+						</label>
+					</p>
+					<p lang="ja">
+						<label>
+							Select (ja):
+							<select>
+								<option>option1</option>
+								<hr />
+								<option>option2</option>
+								<optgroup label="optgroup">
+									<option>optgroup > option</option>
+								</optgroup>
+							</select>
+						</label>
+					</p>
+
+					<p><button>button (en)</button></p>
+					<p lang="ja"><button>button (ja)</button></p>
+
+					<p>
+						<label>Textarea (en): <textarea>textarea</textarea></label>
+					</p>
+					<p lang="ja">
+						<label>Textarea (ja): <textarea>textarea</textarea></label>
+					</p>
+				</section>
+			</section>
+
+			<section id="best-practice">
+				<h2>Best practice</h2>
+
+				<section>
+					<h3><code>box-sizing</code></h3>
+
+					<style>
+						.best-practice_box-sizing {
+							block-size: 200px;
+							inline-size: 200px;
+							border: 2px solid;
+						}
+					</style>
+					<div class="best-practice_box-sizing">200px × 200px</div>
+				</section>
+
+				<section>
+					<h3><code>:any-link</code></h3>
+
+					<p><a href="">link</a></p>
+				</section>
+			</section>
+		</main>
+	</body>
+</html>
