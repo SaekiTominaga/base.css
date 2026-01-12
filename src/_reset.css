@@ -103,6 +103,7 @@ menu,
 ol,
 ul {
 	padding-inline-start: unset;
+	list-style-type: none;
 }
 
 /**
@@ -151,6 +152,21 @@ legend {
  */
 iframe {
 	border-style: unset;
+}
+
+/**
+ * 15.5.5 The `details` and `summary` elements
+ *
+ * https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements
+ */
+summary {
+	&:first-of-type {
+		list-style-type: none;
+	}
+
+	&::-webkit-details-marker {
+		display: none; /* for Safari 18.3- */
+	}
 }
 
 /**
