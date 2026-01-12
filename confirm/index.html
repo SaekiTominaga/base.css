@@ -215,13 +215,15 @@ pre31</pre
 					<h3><code>box-sizing</code></h3>
 
 					<style>
-						.best-practice_box-sizing {
-							block-size: 200px;
-							inline-size: 200px;
-							border: 2px solid;
+						@scope {
+							.box {
+								block-size: 200px;
+								inline-size: 200px;
+								border: 2px solid;
+							}
 						}
 					</style>
-					<div class="best-practice_box-sizing">200px × 200px</div>
+					<div class="box">200px × 200px</div>
 				</section>
 
 				<section>
