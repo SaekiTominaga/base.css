@@ -90,12 +90,6 @@ ul {
 	padding-inline-start: unset;
 }
 
-menu,
-ul {
-	padding-inline-start: unset;
-	list-style-type: unset;
-}
-
 /**
  * 15.3.8 Tables
  *

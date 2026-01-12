@@ -16,6 +16,12 @@ pre {
 	overflow-inline: auto;
 }
 
+menu,
+ol,
+ul {
+	list-style-type: none;
+}
+
 table {
 	border-collapse: collapse;
 }
