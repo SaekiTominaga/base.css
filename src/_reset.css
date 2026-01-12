@@ -39,6 +39,21 @@ pre {
 	}
 }
 
+dialog {
+	border-style: unset;
+	padding: unset;
+
+	&:modal {
+		max-block-size: unset;
+		max-inline-size: unset;
+	}
+}
+
+[popover] {
+	border-style: unset;
+	padding: unset;
+}
+
 /**
  * 15.3.4 Phrasing content
  *
