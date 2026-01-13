@@ -182,8 +182,7 @@ button,
 textarea,
 ::file-selector-button /* for Firefox <resource://gre-resources/forms.css> */
 {
-	font-family: unset;
-	font-size: unset;
+	font: unset;
 }
 
 input {
