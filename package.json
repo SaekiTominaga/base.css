@@ -18,11 +18,11 @@
 		"url": "git+https://github.com/SaekiTominaga/base.css.git"
 	},
 	"scripts": {
-		"dev": "http-server -o confirm -c-1",
+		"dev": "http-server -o demo -c-1",
 		"prebuild": "npm run lint && rimraf -g dist",
 		"build": "postcss src/base.css -d dist",
 		"postbuild": "prettier --config ./.prettierrc.mjs --ignore-path .prettierignore -w \"dist/**/*.css\"",
-		"lint": "stylelint src/**/*.css confirm/**/*.css"
+		"lint": "stylelint demo/**/*.css src/**/*.css"
 	},
 	"devDependencies": {
 		"@w0s/stylelint-config": "^4.17.0",
