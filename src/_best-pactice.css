@@ -1,6 +1,7 @@
 :root {
 	box-sizing: border-box;
 	overflow-wrap: anywhere;
+	text-autospace: ideograph-alpha;
 }
 
 *,
