@@ -179,7 +179,7 @@ a:not(:any-link) {
 input,
 select,
 button,
-textarea
+textarea,
 ::file-selector-button /* for Firefox <resource://gre-resources/forms.css> */
 {
 	font-family: unset;
