@@ -2,6 +2,11 @@
 	"name": "@w0s/base.css",
 	"version": "1.3.2",
 	"description": "Base CSS file used on `w0s.jp`",
+	"keywords": [
+		"reset-css",
+		"reset.css",
+		"resetcss"
+	],
 	"homepage": "https://github.com/SaekiTominaga/base.css#readme",
 	"bugs": {
 		"url": "https://github.com/SaekiTominaga/base.css/issues"
