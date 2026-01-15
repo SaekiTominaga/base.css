@@ -8,7 +8,7 @@
 
 本 CSS は厳密にはリセット CSS でもノーマライズ CSS でもありません。すべてのスタイルをリセットするわけではなく、またブラウザ間の差異をゼロにするつもりもありません。スタイルを [`revert`](https://drafts.csswg.org/css-cascade/#default) する必要がないことを目標とし、リセットやノーマライズは最低限としています。
 
-とはいえ思想の入れ込みが完全にゼロなわけではありません。[`_best-pactice.css`](https://github.com/SaekiTominaga/base.css/blob/main/src/_best-pactice.css) には個人的な好みが多少混じっています。
+とはいえ思想の入れ込みが完全にゼロなわけではありません。[`_best-practice.css`](https://github.com/SaekiTominaga/base.css/blob/main/src/_best-practice.css) には個人的な好みが多少混じっています。
 
 適切な呼び名がなく、とくにこだわりもないのですが、Web サイトのベースとなるスタイルであることは間違いないので、パッケージ名は base.css としています。
 
