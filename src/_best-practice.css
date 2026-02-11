@@ -1,5 +1,4 @@
 :root {
-	box-sizing: border-box;
 	overflow-wrap: anywhere;
 	text-autospace: ideograph-alpha;
 }
@@ -7,7 +6,7 @@
 *,
 ::before,
 ::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 :any-link {
