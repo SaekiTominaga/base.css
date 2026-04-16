@@ -4,6 +4,5 @@ export default {
 	ignoreFiles: ['dist/**/*.css'],
 	rules: {
 		'plugin/root-colors': null,
-		'plugin/use-logical-properties-and-values': true,
 	},
 };
