@@ -1,6 +1,7 @@
 # base.css
 
 [![npm version](https://badge.fury.io/js/%40w0s%2Fbase.css.svg)](https://www.npmjs.com/package/@w0s/base.css)
+[![CI status](https://github.com/SaekiTominaga/base.css/actions/workflows/ci.yml/badge.svg)](https://github.com/SaekiTominaga/base.css/actions/workflows/ci.yml)
 
 私の個人サイト（[`w0s.jp`](https://github.com/SaekiTominaga/w0s.jp), [`blog.w0s.jp`](https://github.com/SaekiTominaga/blog.w0s.jp)）で使用している、いわゆるリセット CSS です。個人的な用途をモチベーションに開発していますが、本ドキュメントで記す条件、考え方にマッチしているのであればどのような Web サイトにも使えます。
 
