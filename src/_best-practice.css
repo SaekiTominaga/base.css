@@ -30,3 +30,12 @@ input {
 textarea {
 	resize: block;
 }
+
+:any-link,
+abbr[title],
+ins,
+del {
+	&:lang(ja) {
+		text-decoration-inset: auto;
+	}
+}
