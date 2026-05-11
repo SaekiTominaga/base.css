@@ -32,9 +32,9 @@
 	"devDependencies": {
 		"@w0s/stylelint-config": "4.20.0",
 		"http-server": "14.1.1",
-		"postcss": "8.5.10",
+		"postcss": "8.5.14",
 		"postcss-cli": "11.0.1",
-		"postcss-discard-comments": "7.0.5",
+		"postcss-discard-comments": "8.0.0",
 		"postcss-import": "16.1.1",
 		"postcss-nesting": "14.0.0",
 		"prettier": "3.8.3",
