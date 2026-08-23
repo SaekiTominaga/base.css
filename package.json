@@ -11,33 +11,36 @@
 	"bugs": {
 		"url": "https://github.com/SaekiTominaga/base.css/issues"
 	},
+	"license": "MIT",
+	"author": "Saeki Tominaga",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/SaekiTominaga/base.css.git"
 	},
-	"license": "MIT",
-	"author": "Saeki Tominaga",
-	"type": "module",
-	"main": "dist/base.css",
 	"files": [
 		"dist/**/*.css"
 	],
+	"type": "module",
+	"main": "dist/base.css",
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"dev": "http-server -o demo -c-1",
 		"prebuild": "npm run lint && rimraf -g dist",
 		"build": "postcss src/base.css -d dist",
-		"postbuild": "prettier --config ./.prettierrc.mjs --ignore-path .prettierignore -w \"dist/**/*.css\"",
+		"postbuild": "oxfmt \"dist/base.css\"",
 		"lint": "stylelint demo/**/*.css src/**/*.css"
 	},
 	"devDependencies": {
 		"@w0s/stylelint-config": "4.20.0",
 		"http-server": "14.1.1",
+		"oxfmt": "0.64.0",
 		"postcss": "8.5.25",
 		"postcss-cli": "11.0.1",
 		"postcss-discard-comments": "8.0.1",
 		"postcss-import": "16.1.1",
 		"postcss-nesting": "14.0.0",
-		"prettier": "3.9.4",
 		"rimraf": "6.1.3",
 		"stylelint": "17.14.0",
 		"stylelint-attribute-case-sensitivity": "3.0.1",
@@ -46,8 +49,5 @@
 		"stylelint-no-default-viewport": "2.0.1",
 		"stylelint-plugin-logical-css": "2.1.0",
 		"stylelint-root-colors": "3.0.1"
-	},
-	"publishConfig": {
-		"access": "public"
 	}
 }
