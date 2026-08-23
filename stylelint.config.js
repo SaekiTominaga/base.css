@@ -5,4 +5,12 @@ export default {
 	rules: {
 		'plugin/root-colors': null,
 	},
+	overrides: [
+		{
+			files: ['src/_reset.css'],
+			rules: {
+				'property-disallowed-list': null,
+			},
+		},
+	],
 };
