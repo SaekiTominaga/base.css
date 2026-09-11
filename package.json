@@ -27,10 +27,10 @@
 	},
 	"scripts": {
 		"dev": "http-server -o demo -c-1",
-		"prebuild": "npm run lint && rimraf -g dist",
+		"prebuild": "rimraf dist",
 		"build": "postcss src/base.css -d dist",
-		"postbuild": "oxfmt \"dist/base.css\"",
-		"lint": "stylelint demo/**/*.css src/**/*.css"
+		"postbuild": "oxfmt dist/base.css",
+		"lint": "stylelint \"demo/**/*.css\" \"src/**/*.css\""
 	},
 	"devDependencies": {
 		"@w0s/stylelint-config": "4.24.0",
