@@ -18,10 +18,12 @@
 		"url": "git+https://github.com/SaekiTominaga/base.css.git"
 	},
 	"files": [
-		"dist/**/*.css"
+		"dist"
 	],
 	"type": "module",
-	"main": "dist/base.css",
+	"exports": {
+		".": "./dist/base.css"
+	},
 	"publishConfig": {
 		"access": "public"
 	},
