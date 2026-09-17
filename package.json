@@ -32,10 +32,14 @@
 		"prebuild": "rimraf dist",
 		"build": "postcss src/base.css -d dist",
 		"postbuild": "oxfmt dist/base.css",
-		"lint": "stylelint \"demo/**/*.css\" \"src/**/*.css\""
+		"prelint": "npm run build",
+		"lint": "conc --raw \"npm run lint:css\" \"npm run lint:package\"",
+		"lint:css": "stylelint \"demo/**/*.css\" \"src/**/*.css\"",
+		"lint:package": "publint"
 	},
 	"devDependencies": {
 		"@w0s/stylelint-config": "4.24.0",
+		"concurrently": "10.0.5",
 		"http-server": "14.1.1",
 		"oxfmt": "0.66.0",
 		"postcss": "8.5.26",
@@ -43,6 +47,7 @@
 		"postcss-discard-comments": "8.0.4",
 		"postcss-import": "17.0.0",
 		"postcss-nesting": "14.0.1",
+		"publint": "0.3.24",
 		"rimraf": "6.1.3",
 		"stylelint": "17.14.1",
 		"stylelint-attribute-case-sensitivity": "3.1.1",
