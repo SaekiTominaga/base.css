@@ -1,6 +1,6 @@
 {
 	"name": "@w0s/base.css",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"description": "Base CSS file used on `w0s.jp`",
 	"keywords": [
 		"reset-css",
