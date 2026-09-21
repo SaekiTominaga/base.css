@@ -21,6 +21,7 @@
 		"dist"
 	],
 	"type": "module",
+	"main": "./dist/base.css",
 	"exports": {
 		".": "./dist/base.css"
 	},
