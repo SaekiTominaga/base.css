@@ -43,7 +43,7 @@
 		"concurrently": "10.0.5",
 		"http-server": "14.1.1",
 		"oxfmt": "0.66.0",
-		"postcss": "8.5.26",
+		"postcss": "8.5.28",
 		"postcss-cli": "11.0.1",
 		"postcss-discard-comments": "8.0.4",
 		"postcss-import": "17.0.0",
