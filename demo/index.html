@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width" />
+
+		<title>Page for browser display verification</title>
+
 		<link rel="stylesheet" href="../src/base.css" />
 		<link rel="stylesheet" href="demo.css" />
-		<title>Page for browser display verification</title>
 	</head>
 	<body>
 		<main>
@@ -38,7 +40,7 @@ pre1 pre2 pre3 pre4 pre5 pre6 pre7 pre8 pre9 pre10 pre11 pre12 pre13 pre14 pre15
 pre31</pre>
 
 					<p><button command="show-modal" commandfor="dialog">show modal dialog</button></p>
-					<dialog id="dialog">
+					<dialog id="dialog" autofocus="">
 						<p>
 							dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog
 							dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog dialog
@@ -223,14 +225,44 @@ pre31</pre>
 
 					<style>
 						@scope {
+							:scope > * + * {
+								margin-block-start: 1em;
+							}
+
 							.box {
-								block-size: 200px;
+								block-size: 100px;
 								inline-size: 200px;
 								border: 2px solid;
+								padding: 20px;
+								box-sizing: inherit;
+							}
+
+							dialog::backdrop {
+								margin-inline: auto;
+								block-size: 100px;
+								inline-size: 200px;
+								padding: 20px;
 							}
 						}
 					</style>
-					<div class="box">200px × 200px</div>
+
+					<div class="box">200px × 100px</div>
+
+					<details open>
+						<summary>Details</summary>
+						<div class="box">
+							200px × 100px
+							<p><small>(<code>::details-content</code>)</small></p>
+						</div>
+					</details>
+
+					<p><button command="show-modal" commandfor="modal-boxsizing">show modal dialog</button></p>
+
+					<dialog id="modal-boxsizing" autofocus="">
+						<p>Modal dialog</p>
+
+						<button command="close" commandfor="modal-boxsizing">Close</button>
+					</dialog>
 				</section>
 				<section>
 					<h3><code>overflow-wrap</code></h3>
