@@ -5,7 +5,9 @@
 
 *,
 ::before,
-::after {
+::after,
+::backdrop,
+::details-content {
 	box-sizing: border-box;
 }
 
