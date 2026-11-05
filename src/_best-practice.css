@@ -12,12 +12,21 @@
 	box-sizing: border-box;
 }
 
+pre {
+	overflow-inline: auto;
+}
+
 :any-link {
 	text-decoration-thickness: from-font;
 }
 
-pre {
-	overflow-inline: auto;
+:any-link,
+abbr[title],
+ins,
+del {
+	&:lang(ja) {
+		text-decoration-inset: auto;
+	}
 }
 
 table {
@@ -34,11 +43,6 @@ textarea {
 	resize: block;
 }
 
-:any-link,
-abbr[title],
-ins,
-del {
-	&:lang(ja) {
-		text-decoration-inset: auto;
-	}
+summary {
+	cursor: default;
 }
