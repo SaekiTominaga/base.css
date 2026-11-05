@@ -41,3 +41,7 @@ input {
 textarea {
 	resize: block;
 }
+
+summary {
+	cursor: default;
+}
