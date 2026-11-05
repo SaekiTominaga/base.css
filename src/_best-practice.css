@@ -1,5 +1,6 @@
 :root {
 	overflow-wrap: anywhere;
+	scrollbar-gutter: stable;
 	text-autospace: ideograph-alpha;
 }
 
