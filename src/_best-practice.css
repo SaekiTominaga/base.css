@@ -33,6 +33,12 @@ table {
 	border-collapse: collapse;
 }
 
+tbody,
+thead,
+tfoot {
+	font-variant-numeric: lining-nums tabular-nums;
+}
+
 input {
 	&[type="search" i] {
 		appearance: textfield; /* for Safari */
