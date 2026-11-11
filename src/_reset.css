@@ -4,8 +4,7 @@
  * https://html.spec.whatwg.org/multipage/rendering.html#the-page
  */
 body {
-	margin-block: unset;
-	margin-inline: unset;
+	margin: unset;
 }
 
 /**
@@ -113,8 +112,7 @@ ul {
  */
 td,
 th {
-	padding-block: unset;
-	padding-inline: unset;
+	padding: unset;
 }
 
 /**
@@ -136,8 +134,7 @@ hr {
 fieldset {
 	margin-inline: unset;
 	border-style: unset;
-	padding-block: unset;
-	padding-inline: unset;
+	padding: unset;
 	min-inline-size: unset;
 }
 
@@ -187,8 +184,7 @@ textarea,
 
 input {
 	&:is([type="checkbox" i], [type="radio" i]) {
-		margin-block: unset;
-		margin-inline: unset;
+		margin: unset;
 	}
 }
 
