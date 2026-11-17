@@ -1,0 +1,31 @@
+a:not(:any-link) {
+	color: unset; /* Dark Reader, iOS Firefox with Website Dark Mode <https://github.com/darkreader/darkreader/issues/9836> */
+}
+
+input,
+select,
+button,
+textarea,
+::file-selector-button {
+	font: unset;
+}
+
+input {
+	&:is([type="checkbox" i], [type="radio" i]) {
+		margin: unset;
+	}
+}
+
+optgroup {
+	font-style: unset; /* Firefox <resource://gre-resources/forms.css> */
+}
+
+textarea {
+	margin-block: unset; /* Firefox <resource://gre-resources/forms.css> */
+}
+
+summary {
+	&::-webkit-details-marker {
+		display: none; /* Safari 18.3- */
+	}
+}

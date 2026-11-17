@@ -31,8 +31,6 @@ address {
 }
 
 pre {
-	font-family: ui-monospace, monospace; /* Specifying multiple values prevents the font size from becoming smaller */
-
 	@media print {
 		text-wrap-mode: unset;
 	}
@@ -64,12 +62,6 @@ em {
 	&:lang(ja) {
 		font-style: unset;
 	}
-}
-
-code,
-kbd,
-samp {
-	font-family: ui-monospace, monospace; /* Specifying multiple values prevents the font size from becoming smaller */
 }
 
 /**
@@ -116,7 +108,7 @@ th {
 }
 
 /**
- * 15.3.11 The hr element
+ * 15.3.11 The `hr` element
  *
  * https://momdo.github.io/html/rendering.html#the-hr-element-2
  */
@@ -127,7 +119,7 @@ hr {
 }
 
 /**
- * 15.3.12 The fieldset and legend elements
+ * 15.3.12 The `fieldset` and `legend` elements
  *
  * https://html.spec.whatwg.org/multipage/rendering.html#the-fieldset-and-legend-elements
  */
@@ -156,42 +148,10 @@ iframe {
  *
  * https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements
  */
-summary {
-	&:first-of-type {
-		list-style-type: none;
+details {
+	& > summary {
+		&:first-of-type {
+			list-style-type: none;
+		}
 	}
-
-	&::-webkit-details-marker {
-		display: none; /* for Safari 18.3- */
-	}
-}
-
-/**
- * etc
- */
-a:not(:any-link) {
-	color: unset; /* for Dark Reader, iOS Firefox with Website Dark Mode <https://github.com/darkreader/darkreader/issues/9836> */
-}
-
-input,
-select,
-button,
-textarea,
-::file-selector-button /* for Firefox <resource://gre-resources/forms.css> */
-{
-	font: unset;
-}
-
-input {
-	&:is([type="checkbox" i], [type="radio" i]) {
-		margin: unset;
-	}
-}
-
-optgroup {
-	font-style: unset; /* for Firefox <resource://gre-resources/forms.css> */
-}
-
-textarea {
-	margin-block: unset; /* for Firefox <resource://gre-resources/forms.css> */
 }

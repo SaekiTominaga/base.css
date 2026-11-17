@@ -1,9 +1,14 @@
 :root {
-	overflow-wrap: anywhere;
 	scrollbar-gutter: stable;
+	overflow-wrap: anywhere;
 	text-autospace: ideograph-alpha;
 }
 
+/**
+ * CSS Box Sizing Module Level 3
+ *
+ * https://drafts.csswg.org/css-sizing-3/
+ */
 *,
 ::before,
 ::after,
@@ -12,10 +17,39 @@
 	box-sizing: border-box;
 }
 
+/**
+ * CSS Basic User Interface Module Level 4
+ *
+ * https://drafts.csswg.org/css-ui-4/
+ */
+input {
+	&[type="search" i] {
+		appearance: textfield; /* for Safari */
+	}
+}
+
+textarea {
+	resize: block;
+}
+
+summary {
+	cursor: default;
+}
+
+/**
+ * CSS Overflow Module Level 3
+ *
+ * https://drafts.csswg.org/css-overflow-3/
+ */
 pre {
 	overflow-inline: auto;
 }
 
+/**
+ * CSS Text Decoration Module Level 4
+ *
+ * https://drafts.csswg.org/css-text-decor-4/
+ */
 :any-link {
 	text-decoration-thickness: from-font;
 }
@@ -29,8 +63,16 @@ del {
 	}
 }
 
-table {
-	border-collapse: collapse;
+/**
+ * CSS Fonts Module Level 4
+ *
+ * https://drafts.csswg.org/css-fonts-4/
+ */
+pre,
+code,
+kbd,
+samp {
+	font-family: ui-monospace, monospace; /* Specifying multiple values prevents the font size from becoming smaller */
 }
 
 tbody,
@@ -39,16 +81,11 @@ tfoot {
 	font-variant-numeric: lining-nums tabular-nums;
 }
 
-input {
-	&[type="search" i] {
-		appearance: textfield; /* for Safari */
-	}
-}
-
-textarea {
-	resize: block;
-}
-
-summary {
-	cursor: default;
+/**
+ * Cascading Style Sheets (CSS) Level 2
+ *
+ * https://drafts.csswg.org/css2/
+ */
+table {
+	border-collapse: collapse;
 }

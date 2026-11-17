@@ -7,7 +7,7 @@ export default {
 	},
 	overrides: [
 		{
-			files: ['src/_reset.css'],
+			files: ['src/_normalize.css'],
 			rules: {
 				'property-disallowed-list': null,
 			},

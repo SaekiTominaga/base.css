@@ -1,31 +1,23 @@
-main {
-	--heading-font-ratio: 1.25;
-
-	& > * + * {
-		margin-block-start: 2rem;
-	}
-
-	& > section {
-		& > * + * {
-			margin-block-start: 1.5rem;
-		}
-
-		& > section > h3:first-child {
-			margin-block-end: 1rem;
-		}
-	}
-
-	& > h1:first-child {
-		font-size: calc(100% * pow(var(--heading-font-ratio), 3));
-	}
+:root {
+	box-sizing: border-box;
+	margin-inline: auto;
+	border-block-width: 0;
+	border-inline-width: 1px;
+	border-style: dotted;
+	border-color: oklch(75% 0 0deg);
+	padding-block-end: 5rem;
+	min-block-size: 100svb;
+	max-inline-size: 1280px;
 }
 
-section {
-	& > h2:first-child {
-		font-size: calc(100% * pow(var(--heading-font-ratio), 2));
-	}
+body {
+	margin: unset;
+}
 
-	& > h3:first-child {
-		font-size: calc(100% * pow(var(--heading-font-ratio), 1));
+main {
+	& > h1,
+	& > section > h2 {
+		margin-block: revert;
+		font-size: revert;
 	}
 }
