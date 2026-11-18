@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width" />
+
+		<title>Best practice</title>
+
+		<link rel="stylesheet" href="../src/_best-practice.css" />
+		<link rel="stylesheet" href="demo.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Best practice</h1>
+
+			<section>
+				<h2><code>box-sizing</code> for all elements</h2>
+
+				<div class="box">200px × 100px</div>
+
+				<details open>
+					<summary>Details</summary>
+					<div class="box">
+						200px × 100px
+						<p><small>(<code>::details-content</code>)</small></p>
+					</div>
+				</details>
+
+				<p><button command="show-modal" commandfor="modal-boxsizing">show modal dialog</button></p>
+
+				<dialog id="modal-boxsizing" autofocus="">
+					<p>Modal dialog</p>
+
+					<button command="close" commandfor="modal-boxsizing">Close</button>
+				</dialog>
+
+				<style>
+					@scope {
+						:scope > * + * {
+							margin-block-start: 1em;
+						}
+
+						.box {
+							block-size: 100px;
+							inline-size: 200px;
+							border: 2px solid;
+							padding: 20px;
+							box-sizing: inherit;
+						}
+
+						dialog::backdrop {
+							margin-inline: auto;
+							block-size: 100px;
+							inline-size: 200px;
+							padding: 20px;
+						}
+					}
+				</style>
+			</section>
+
+			<section>
+				<h2><code>appearance</code> for <code>input[type=search]</code></h2>
+
+				<p>
+					<label>Search: <input type="search" /></label>
+				</p>
+			</section>
+
+			<section>
+				<h2><code>resize</code> for <code>textarea</code></h2>
+
+				<p>
+					<label>Textarea: <textarea></textarea></label>
+				</p>
+			</section>
+
+			<section>
+				<h2><code>cursor</code> for <code>summary</code></h2>
+
+				<details>
+					<summary>summary</summary>
+					details
+				</details>
+			</section>
+
+			<section>
+				<h2><code>overflow-wrap</code></h2>
+
+				<p>
+					<code
+						>http://example.com/pathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpathpath</code
+					>
+				</p>
+			</section>
+
+			<section>
+				<h2><code>text-autospace</code></h2>
+
+				<dl lang="ja">
+					<div>
+						<dt>手動スペースなし</dt>
+						<dd>日本語English日本語2000年1月2日</dd>
+					</div>
+					<div>
+						<dt>手動スペース挿入</dt>
+						<dd>日本語 English 日本語 2000年1月2日</dd>
+					</div>
+				</dl>
+
+				<style>
+					@scope {
+						dt {
+							font-weight: bolder;
+						}
+
+						dd {
+							margin-inline-start: 1em;
+						}
+					}
+				</style>
+			</section>
+
+			<section>
+				<h2><code>text-decoration-thickness</code> for anchor link</h2>
+
+				<p><a href="">Link</a></p>
+			</section>
+
+			<section>
+				<h2><code>text-decoration-inset</code></h2>
+
+				<dl lang="ja">
+					<div>
+						<dt><code>:any-link</code></dt>
+						<dd><a href="">こんにちは</a><a href="">こんばんは</a></dd>
+					</div>
+					<div>
+						<dt><code>abbr[title]</code></dt>
+						<dd><abbr title="こんにちは">こんにちは</abbr><abbr title="こんばんは">こんばんは</abbr></dd>
+					</div>
+					<div>
+						<dt><code>ins</code></dt>
+						<dd><ins>こんにちは</ins><ins>こんばんは</ins></dd>
+					</div>
+					<div>
+						<dt><code>del</code></dt>
+						<dd><del>こんにちは</del><del>こんばんは</del></dd>
+					</div>
+				</dl>
+
+				<style>
+					@scope {
+						dt {
+							font-weight: bolder;
+						}
+
+						dd {
+							margin-inline-start: 1em;
+						}
+					}
+				</style>
+			</section>
+
+			<section>
+				<h2>Monospace font</h2>
+
+				<pre>pre</pre>
+				<p><code>code</code> <kbd>kbd</kbd> <samp>samp</samp></p>
+			</section>
+
+			<section>
+				<h2><code>font-variant-numeric</code> for Table</h2>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>01234</td>
+						</tr>
+						<tr>
+							<td>56789</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<style>
+					@import url('https://fonts.googleapis.com/css2?family=Inter&text=0123456789');
+
+					@scope {
+						table {
+							font-family: 'Inter';
+						}
+					}
+				</style>
+			</section>
+
+			<section>
+				<h2><code>border-collapse</code> for Table</h2>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>td</td>
+							<td>td</td>
+						</tr>
+						<tr>
+							<td>td</td>
+							<td>td</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<style>
+					@scope {
+						td {
+							border: 1px solid;
+						}
+					}
+				</style>
+			</section>
+		</main>
+	</body>
+</html>

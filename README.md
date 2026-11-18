@@ -5,6 +5,8 @@
 
 私の個人サイト（[`w0s.jp`](https://github.com/SaekiTominaga/w0s.jp), [`blog.w0s.jp`](https://github.com/SaekiTominaga/blog.w0s.jp)）で使用している、いわゆるリセット CSS です。個人的な用途をモチベーションに開発していますが、本ドキュメントで記す条件、考え方にマッチしているのであればどのような Web サイトにも使えます。
 
+[デモページ](https://saekitominaga.github.io/base.css/demo/)
+
 ## Reset or Normalize ?
 
 本 CSS は厳密にはリセット CSS でもノーマライズ CSS でもありません。すべてのスタイルをリセットするわけではなく、またブラウザ間の差異をゼロにするつもりもありません。スタイルを [`revert`](https://drafts.csswg.org/css-cascade/#default) する必要がないことを目標とし、リセットやノーマライズは最低限としています。
