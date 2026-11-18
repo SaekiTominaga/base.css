@@ -12,7 +12,10 @@
 *,
 ::before,
 ::after,
-::backdrop,
+::backdrop {
+	box-sizing: border-box;
+}
+
 ::details-content {
 	box-sizing: border-box;
 }
