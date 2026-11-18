@@ -7,7 +7,7 @@
 	border-color: oklch(75% 0 0deg);
 	padding-block-end: 5rem;
 	min-block-size: 100svb;
-	max-inline-size: 1280px;
+	max-inline-size: 1024px;
 }
 
 body {
