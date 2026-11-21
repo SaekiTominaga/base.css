@@ -23,7 +23,10 @@
 	"type": "module",
 	"main": "./dist/base.css",
 	"exports": {
-		".": "./dist/base.css"
+		".": "./dist/base.css",
+		"./reset": "./dist/reset.css",
+		"./normalize": "./dist/normalize.css",
+		"./best-practice": "./dist/best-practice.css"
 	},
 	"publishConfig": {
 		"access": "public"
@@ -31,8 +34,8 @@
 	"scripts": {
 		"dev": "http-server -o demo -c-1",
 		"prebuild": "rimraf dist",
-		"build": "postcss src/base.css -d dist",
-		"postbuild": "oxfmt dist/base.css",
+		"build": "postcss src/**/*.css -d dist",
+		"postbuild": "oxfmt dist/base.css dist/best-practice.css dist/normalize.css dist/reset.css",
 		"prelint": "npm run build",
 		"lint": "conc --raw \"npm run lint:css\" \"npm run lint:package\"",
 		"lint:css": "stylelint \"demo/**/*.css\" \"src/**/*.css\"",

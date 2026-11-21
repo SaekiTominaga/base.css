@@ -7,11 +7,36 @@
 
 [デモページ](https://saekitominaga.github.io/base.css/demo/)
 
+## 使用方法
+
+```css
+@layer reset, normalize, best-practice;
+
+@import url('@w0s/base.css/reset') layer(reset);
+@import url('@w0s/base.css/normalize') layer(normalize);
+@import url('@w0s/base.css/best-practice') layer(best-practice);
+
+.any-selector {
+  /* Additional styles */
+}
+```
+
+<dl>
+<dt><code>@w0s/base.css</code></dt>
+<dd>下記3つのスタイルを包括したもの</dd>
+<dt><code>@w0s/base.css/reset</code></dt>
+<dd>ユーザーエージェントスタイルシートが設定するスタイルのうち、制作者スタイルシートで上書きする可能性の高いものをリセットする</dd>
+<dt><code>@w0s/base.css/normalize</code></dt>
+<dd>ブラウザによる表示差異の吸収</dd>
+<dt><code>@w0s/base.css/best-practice</code></dt>
+<dd>ベストプラクティスの観点によるスタイル</dd>
+</dl>
+
 ## Reset or Normalize ?
 
 本 CSS は厳密にはリセット CSS でもノーマライズ CSS でもありません。すべてのスタイルをリセットするわけではなく、またブラウザ間の差異をゼロにするつもりもありません。スタイルを [`revert`](https://drafts.csswg.org/css-cascade/#default) する必要がないことを目標とし、リセットやノーマライズは最低限としています。
 
-とはいえ思想の入れ込みが完全にゼロなわけではありません。[`_best-practice.css`](https://github.com/SaekiTominaga/base.css/blob/main/src/_best-practice.css) には個人的な好みが多少混じっています。
+とはいえ思想の入れ込みが完全にゼロなわけではありません。[`best-practice.css`](https://github.com/SaekiTominaga/base.css/blob/main/src/best-practice.css) には個人的な好みが多少混じっています。
 
 適切な呼び名がなく、とくにこだわりもないのですが、Web サイトのベースとなるスタイルであることは間違いないので、パッケージ名は base.css としています。
 
