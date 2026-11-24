@@ -32,7 +32,7 @@
 		"access": "public"
 	},
 	"scripts": {
-		"dev": "http-server -o demo -c-1",
+		"dev": "vite",
 		"prebuild": "rimraf dist",
 		"build": "postcss src/**/*.css -d dist",
 		"postbuild": "oxfmt dist/base.css dist/best-practice.css dist/normalize.css dist/reset.css",
@@ -44,7 +44,6 @@
 	"devDependencies": {
 		"@w0s/stylelint-config": "5.0.1",
 		"concurrently": "10.0.6",
-		"http-server": "14.1.1",
 		"oxfmt": "0.75.0",
 		"postcss": "8.5.32",
 		"postcss-cli": "12.0.0",
@@ -53,6 +52,7 @@
 		"postcss-nesting": "14.0.3",
 		"publint": "0.3.25",
 		"rimraf": "6.1.4",
-		"stylelint": "18.0.0"
+		"stylelint": "18.0.0",
+		"vite": "8.3.8"
 	}
 }
