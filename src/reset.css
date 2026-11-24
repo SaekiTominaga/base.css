@@ -102,6 +102,10 @@ ul {
  *
  * https://html.spec.whatwg.org/multipage/rendering.html#tables-2
  */
+caption {
+	text-align: unset;
+}
+
 td,
 th {
 	padding: unset;
